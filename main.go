@@ -58,7 +58,7 @@ func recInfo(list *sync.Map, id, randomTime int) {
 
 func printInfo(list *sync.Map, n int) {
 	for i := n; i > 0; i-- {
-		if timeSleep, ok := list.Load("name"); ok {
+		if timeSleep, ok := list.Load(n); ok {
 			fmt.Println("Номер горутины: ", i, "Время сна: ", timeSleep)
 		}
 	}
